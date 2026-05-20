@@ -14,7 +14,6 @@ CSV_PATH = BASE_DIR / "fishing_weather.csv"
 # CSVを読み込む関数
 # utf-8-sigで読むことでExcel向けCSVも文字化けしにくくする
 # =========================================================
-@st.cache_data
 def load_data():
     if not CSV_PATH.exists():
         st.error("fishing_weather.csv が見つかりません。")
